@@ -1,0 +1,401 @@
+﻿<Page
+    x:Class="BusIndia_Universal.BusBookingSummary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Name="WhiteBoxVaule" TargetType="StackPanel">
+            <Setter Property="Background" Value="AntiqueWhite"></Setter>
+        </Style>
+        <Style x:Name="TotalValueBox" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#F2CA60"></Setter>
+            <Setter Property="Margin" Value="0,10,0,0"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Name="MarginTop10" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10,10,0,0"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Center" Background="#193A67">
+            <Image Source="Assets/Images/Home_b.jpg" VerticalAlignment="Stretch" Stretch="Fill"></Image>
+        </Grid>
+        <Grid x:Name="LayoutRoot" >
+            <Grid.Background>
+                <ImageBrush Stretch="None" ImageSource="Assets/Images/Home_b.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="0,0,0,0" Background="{Binding AccountBackground}">
+                <Grid Grid.Row="0" Margin="0,0,0,0" Background="{Binding AccountBackground}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Image x:ConnectionId='2' Margin="10,0,0,0"  Source="Assets/hdpi/navigation_bar_back.png" Stretch="None" Height="45"                       />
+                    </StackPanel>
+                    <StackPanel  Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center" Text="Total Price :&#x20b9; " FontSize="20"  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <TextBlock x:Name="txtbTotalPrice"  HorizontalAlignment="Center" Text="500 " FontSize="20"  VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1"  ScrollViewer.IsVerticalRailEnabled="True" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ScrollViewer >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid x:Name="ContentPanelD" Grid.Row="0" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="OneWayGridD" Grid.Row="0" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" Visibility="Visible" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,10,5,0">
+                                    <StackPanel x:Name="OneWayStackPanelD" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <StackPanel>
+                                                    <TextBlock Text="Selected Departure Trip" FontSize="15" Foreground="#A5A5A5" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <Image Margin="10,0,0,0"  Source="Assets/hdpi/cross.png" Height="40" />
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                                    <TextBlock x:Name="txtbFrom" Text="KRTC" FontSize="25" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbViaRout" Text="via rout" FontSize="15" Foreground="Black"  RenderTransformOrigin="0.611,-0.864"></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                                    <TextBlock Text="&#x20b9;" FontSize="20"  Foreground="Green"  ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                    <TextBlock x:Name="txtbDTripPrice" Text="500" FontSize="20"  Foreground="Green" Width="40" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="2" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <TextBlock x:Name="txtbFromDateD" Text="18th Feb 2013" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbFromLocationD" Text="BANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                    <TextBlock x:Name="txtbFromTimeD" Text="12.15 pm" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                                    <Image Source="Assets/hdpi/line.png" ></Image>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbToDateD" Text="18th Feb 2013" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbToLocationD" Text="MANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                    <TextBlock x:Name="txtbToTimeD" Text="12.15 pm" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                </StackPanel>
+
+                                            </Grid>
+                                            <Grid Grid.Row="3" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <TextBlock  Text="PICKUP POINT :" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbPickuplocationD" Text="BANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom">
+                                                    <TextBlock  Text=" BUS STATION at" FontSize="20" Foreground="Black" ></TextBlock>
+
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbPickupTimeD"  Text=" 12.20pm" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="4" Margin="0,10,0,0">
+
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="BUS TYPE:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbBustypeD"  Text="KARNATAKA SARIGE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="5" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="SEAT NUMBER:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbSeatNumberD"  Text="A12,L12" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                                    <Image Source="Assets\hdpi\splash_logo.png" Height="50" Width="70"></Image>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="REWARDS" FontSize="15" Foreground="Black"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="6" Margin="0,10,0,15">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="TRIP CODE:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbTripCodeD"  Text="OPR36-23" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                    <Border CornerRadius="5,5,5,5" Background="#E65C00" >
+                                                        <TextBlock Text="Earn 161 Points" Padding="5,8,5,8" Margin="0,0,10,0"  FontSize="15" Foreground="White" ></TextBlock>
+                                                    </Border>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                        <Grid x:Name="ContentPanelR" Grid.Row="1" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid x:Name="OneWayGridR" Grid.Row="0" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" Visibility="Visible" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Border Grid.Row="0" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,10,5,0">
+                                    <StackPanel x:Name="OneWayStackPanelR" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <StackPanel>
+                                                    <TextBlock Text="Selected Return Trip" FontSize="15" Foreground="#A5A5A5" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <Image Margin="10,0,0,0"  Source="Assets/hdpi/cross.png" Height="40" />
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                                    <TextBlock x:Name="txtbFromR" Text="KRTC" FontSize="25" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbViaRoutR" Text="via rout" FontSize="15" Foreground="Black"  RenderTransformOrigin="0.611,-0.864"></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                                    <TextBlock Text="&#x20b9;" FontSize="20"  Foreground="Green"  ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                    <TextBlock x:Name="txtbDTripPriceR" Text="500" FontSize="20"  Foreground="Green" Width="40" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="2" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <TextBlock x:Name="txtbFromDateR" Text="18th Feb 2013" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbFromLocationR" Text="MANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                    <TextBlock x:Name="txtbFromTimeR" Text="12.15 pm" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+                                                    <Image Source="Assets/hdpi/line.png" ></Image>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbToDateR" Text="18th Feb 2013" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbToLocationR" Text="BANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                    <TextBlock x:Name="txtbToTimeR" Text="12.15 pm" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="3" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0">
+                                                    <TextBlock  Text="PICKUP POINT :" FontSize="15" Foreground="#A5A5A5" ></TextBlock>
+                                                    <TextBlock x:Name="txtbPickuplocationR" Text="MANGALORE" FontSize="20" Foreground="Black" ></TextBlock>
+
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom">
+                                                    <TextBlock  Text=" BUS STATION at" FontSize="20" Foreground="Black" ></TextBlock>
+
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock x:Name="txtbPickupTimeR"  Text=" 12.20pm" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="4" Margin="0,10,0,0">
+                                                <StackPanel Grid.Row="0" Grid.Column="2" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="BUS TYPE:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbBustypeR"  Text="KARNATAKA SARIGE" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="5" Margin="0,10,0,0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="SEAT NUMBER:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbSeatNumberR"  Text="A12,L12" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                                    <Image Source="Assets\hdpi\splash_logo.png" Height="50" Width="70"></Image>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="REWARDS" FontSize="15" Foreground="Black"></TextBlock>
+                                                </StackPanel>
+                                            </Grid>
+                                            <Grid Grid.Row="6" Margin="0,10,0,15">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom">
+                                                    <TextBlock Text="TRIP CODE:" FontSize="15" Foreground="#A5A5A5"></TextBlock>
+                                                    <TextBlock x:Name="txtbTripCodeR"  Text="OPR36-23" FontSize="20" Foreground="Black" ></TextBlock>
+                                                </StackPanel>
+                                                <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                                    <Border CornerRadius="5,5,5,5" Background="#E65C00" >
+                                                        <TextBlock Text="Earn 161 Points" Padding="5,8,5,8" Margin="0,0,10,0"  FontSize="15" Foreground="White" ></TextBlock>
+                                                    </Border>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+
+            <StackPanel VerticalAlignment="Bottom" Grid.Row="2">
+                <Border Grid.Row="2" CornerRadius="10,10,10,10"  Background="Transparent" BorderThickness="2" VerticalAlignment="Bottom" Height="100">
+                    <Border Width="250" CornerRadius="10,10,10,10" Height="50" BorderBrush="#000099" Background="#000099">
+                        <Button x:ConnectionId='1' Grid.Row="2" x:Name="btnNext"                       BorderBrush="#000099" Background="#000099"  FontSize="20" HorizontalAlignment="Center">
+                            Next
+                        </Button>
+                    </Border>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
+

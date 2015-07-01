@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="BusIndia_Universal.ReceiptPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style x:Name="WhiteBoxVaule" TargetType="StackPanel">
+            <Setter Property="Background" Value="AntiqueWhite"></Setter>
+            <!--<Setter Property="Margin" Value="10,0,10,0"></Setter>-->
+        </Style>
+        <Style x:Name="TotalValueBox" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#50D253"></Setter>
+            <Setter Property="Margin" Value="0,10,0,0"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Name="MarginTop10" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10,10,0,0"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" >
+        <Grid.Background>
+            <ImageBrush Stretch="None" ImageSource="Assets/Images/Home_b.jpg" AlignmentY="Top" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--TitlePanel contains the name of the application and page title-->
+        <Grid Grid.Row="0" Margin="0,0,0,0" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image x:ConnectionId='1' Margin="10,0,0,0" Grid.Column="0" Source="Assets/hdpi/navigation_bar_back.png" Stretch="None"  Height="45"                />
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Receipt" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1"  Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" >
+                <Border CornerRadius="20,20,20,20" BorderBrush="White" Background="White" BorderThickness="2" VerticalAlignment="Stretch">
+                    <StackPanel  x:Name="ContentStackPanel" Orientation="Vertical"  VerticalAlignment="Stretch" DataContext="{Binding}">
+                        <Border Background="Orange" CornerRadius="20,20,0,0" BorderBrush="Orange" BorderThickness="1">
+                            <StackPanel Margin="0,10,0,10" Orientation="Horizontal"  x:Name="ContentTitle">
+                                <Image Margin="10,0,20,0" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="40" Width="40" Stretch="Fill" />
+                                <TextBlock Text="{Binding StationName}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Margin="5,5,0,0" Text="{Binding Via}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10"></TextBlock>
+                            </StackPanel>
+                        </Border>
+                        <TextBlock x:Name="DepartureDate" Style="{StaticResource MarginTop10}" Text="{Binding DepartDate}"   Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15" HorizontalAlignment="Left" />
+                        <TextBlock x:Name="CustomerName" Style="{StaticResource MarginTop10}" Text="{Binding CustomerName}"  Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="25"/>
+                        <TextBlock Style="{StaticResource MarginTop10}" Text="FROM:" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15"/>
+                        <TextBlock Style="{StaticResource MarginTop10}" Text="Banglore" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap"  FontSize="25"/>
+                        <StackPanel Margin="10,10,0,10" Orientation="Horizontal"  HorizontalAlignment="Left">
+                            <Image Height="50" Width="10" Source="\Assets\hdpi\home_travel_card_distance.png"></Image>
+                            <Image x:Name="TravelBy" Height="25" Width="25" Source="\Assets\hdpi\home_travel_card_bus.png"></Image>
+                        </StackPanel>
+                        <TextBlock  Style="{StaticResource MarginTop10}" Text="TO:" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15"/>
+                        <TextBlock x:Name="TravelTo" Style="{StaticResource MarginTop10}" Text="{Binding TravelTo}" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap"  FontSize="25"/>
+                        <Grid  HorizontalAlignment="Stretch"  Margin="0,20,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Style="{StaticResource WhiteBoxVaule}"  >
+                                <TextBlock Margin="10,0,0,0" Text="Departing:"  Width="Auto" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15"/>
+                                <TextBlock Margin="10,0,0,0" Text="{Binding DepartTime}" Width="Auto" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontWeight="Bold"  FontSize="15"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Style="{StaticResource WhiteBoxVaule}" Margin="10,0,0,0">
+                                <TextBlock Margin="10,0,0,0" Text="Arriving:" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15"/>
+                                <TextBlock Margin="10,0,0,0" Text="{Binding ArrivalTime}"  Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontWeight="Bold"  FontSize="15"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid  HorizontalAlignment="Stretch" Margin="0,20,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="1" Style="{StaticResource WhiteBoxVaule}">
+                                <TextBlock Margin="10,0,0,0" Text="Seat(s)" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="15"/>
+                                <TextBlock Margin="10,0,0,0"  Text="{Binding AvailbleSeat}"  Foreground="Black" TextAlignment="Left" TextWrapping="Wrap"  FontSize="15" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Grid>
+                        <StackPanel Margin="10,10,0,10" Orientation="Horizontal">
+                            <TextBlock  Style="{StaticResource TotalValueBox}" Text="Total:" TextWrapping="Wrap" FontSize="20"/>
+                            <TextBlock  Style="{StaticResource TotalValueBox}"  Text="{Binding TotalCost}" TextWrapping="Wrap"  FontSize="20"/>
+                        </StackPanel>
+                        <TextBlock Text="4 min ago" HorizontalAlignment="Right" Margin="0,0,15,0" Width="180" Foreground="Black" TextAlignment="Right" TextWrapping="Wrap" FontSize="10"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--<StackPanel Orientation="Vertical" Grid.Row="0">
+                    <toolkit:PhoneTextBox Hint="Email Address" Text="" Name="TxtEmail"/>
+                    <toolkit:PhoneTextBox Hint="Password" Text="" Name="txtPassword"/>
+                    <Button Content="Log in" Click="Button_Click"></Button>
+                </StackPanel>-->
+        </Grid>
+    </Grid>
+</Page>
+

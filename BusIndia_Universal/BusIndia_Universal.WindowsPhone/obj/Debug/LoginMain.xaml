@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="BusIndia_Universal.LoginMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid x:Name="LayoutRoot" Grid.Row="0" Background="Transparent">
+        <!--Title StackPanel for Menu logo user active or not active-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#173966">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image x:ConnectionId='4' Source="Assets/hdpi/login_close.png" HorizontalAlignment="Right" Stretch="None" Height="25" Width="25" Margin="15"                       />
+        </Grid>
+        <Grid HorizontalAlignment="Center" Grid.Row="1"  VerticalAlignment="Stretch" Width="{Binding ActualWidth,ElementName=LayoutRoot}" Height="{Binding AcutalHeigth,ElementName=LayoutRoot}" Background="#173966">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Border Margin="5,0,6,0" CornerRadius="20,20,20,20" BorderBrush="White" Background="White" BorderThickness="2" Height="Auto" VerticalAlignment="Stretch">
+                    <Grid  HorizontalAlignment="Center" Width="{Binding ActualWidth,ElementName=LayoutRoot}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Login" HorizontalAlignment="Center" Width="70" Grid.Row="0" TextAlignment="Center" Foreground="Black" Margin="0,15,0,0" FontSize="25"/>
+                        <TextBlock Text="Busindia.com is the world's largest integrated online bus ticketing portal today. It brings together government and private bus transport operators across India under a single window this facilitating user to plan their bus travel across Indian cities with ease." HorizontalAlignment="Center"  Foreground="Black" TextWrapping="Wrap" TextAlignment="Left" FontSize="18" Padding="10"  Margin="20,0,20,0" Grid.Row="1"/>
+                        <StackPanel x:Name="LoginButtonGroup" Grid.Row="2" Margin="30,40,30,0" HorizontalAlignment="Center">
+                            <Button x:ConnectionId='1'                       Background="#3B5999" Height="80" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}">
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,0" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}">
+                                    <Image Source="Assets/hdpi/home_not_logged_in.png" Stretch="Fill" Height="20" Width="20" Margin="0,0,50,0"/>
+                                    <TextBlock Text="Login with Facebook" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:ConnectionId='2'                    Background="#DE3135" Height="80" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}">
+                                <StackPanel Orientation="Horizontal"  Margin="0,0,0,0" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}">
+                                    <Image Source="Assets/hdpi/home_not_logged_in.png" Stretch="Fill" Height="20" Width="20" Margin="0,0,50,0" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="Login with Gmail" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button x:ConnectionId='3'                       Background="#999999" Height="80" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}">
+                                <StackPanel Orientation="Horizontal"  Margin="0,0,0,0" Width="{Binding ActualWidth,ElementName=LoginButtonGroup}" >
+                                    <Image Source="" Stretch="Fill" Height="20" Width="20" Margin="0,0,50,0" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="Bus India Account" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                                </StackPanel>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+        <!--bottom stack panel for options bus- hotels - cab-->
+    </Grid>
+</Page>
+

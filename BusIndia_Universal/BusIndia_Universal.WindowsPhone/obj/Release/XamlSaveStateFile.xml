@@ -1,0 +1,13 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="e:\busindia\busindia\busindia_universal\busindia_universal.windowsphone\obj\release\intermediatexaml\busindia_universal.windowsphone.exe" HashGuid="1216ef82-39e2-441d-ec4d-3394e70313c7" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\busindiabll\bin\debug\busindiabll.dll" HashGuid="17d24138-a355-8382-9d9e-3ed53b05422c" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\imagetools-pcl.0.3.1\lib\phonecodecontractsassemblies.dll" HashGuid="a959558e-7335-c9c6-06b6-30dc68bdcbad" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\slideview.1.4.2\lib\wpa81\slideview.library.dll" HashGuid="8bada411-7e4f-d4c4-fcf0-a85bac65ee0e" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\winphonecontrols.1.0.1\lib\winphonecontrols.core.dll" HashGuid="646f1096-2e4a-1bc4-3fd4-dad1a0659901" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\winphonecontrols.1.0.1\lib\winphonecontrols.input.dll" HashGuid="eeffea16-9c64-ba42-6899-d8e6b40087a4" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\winphonecontrols.1.0.1\lib\winphonecontrols.primitives.dll" HashGuid="ecea89e4-ab50-5d27-1f61-d7d7a88b11bf" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\winrtxamltoolkit.controls.calendar.windowsphone.1.8.1.0\lib\wpa\winrtxamltoolkit.controls.calendar.dll" HashGuid="e2bb7d37-32d1-a043-8c23-fbe0ec2c168b" />
+    <ReferenceAssembly PathName="c:\users\webashlar\desktop\busindia\packages\winrtxamltoolkit.windowsphone.1.8.1.0\lib\wpa\winrtxamltoolkit.dll" HashGuid="221e17c6-64f2-d53e-b7b5-145a2dbe921c" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -1,0 +1,560 @@
+﻿<Page
+    x:Class="BusIndia_Universal.BusSearch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tolls="using:WinRTXamlToolkit.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Name="WhiteBoxVaule" TargetType="StackPanel">
+            <Setter Property="Background" Value="AntiqueWhite"></Setter>
+            <!--<Setter Property="Margin" Value="10,0,10,0"></Setter>-->
+        </Style>
+
+        <Style x:Name="TotalValueBox" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#F2CA60"></Setter>
+            <Setter Property="Margin" Value="0,10,0,0"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        <Style x:Name="MarginTop10" TargetType="TextBlock">
+            <Setter Property="Margin" Value="10,10,0,0"></Setter>
+        </Style>
+        <x:Double x:Key="ContentControlFontSize">20.26</x:Double>
+        <Style x:Key="DatePickerStyle1" TargetType="DatePicker">
+            <Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ContentControlFontSize}"/>
+            <Setter Property="Foreground" Value="{ThemeResource DatePickerForegroundThemeBrush}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DatePicker">
+                        <StackPanel x:Name="LayoutRoot" Margin="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="HeaderContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Margin="0,0,0,-3" Style="{StaticResource HeaderContentPresenterStyle}" Height="2" RenderTransformOrigin="0.5,0.5">
+                                <ContentPresenter.RenderTransform>
+                                    <CompositeTransform ScaleY="-1"/>
+                                </ContentPresenter.RenderTransform>
+                            </ContentPresenter>
+                            <Button x:Name="FlyoutButton" BorderBrush="Transparent" BorderThickness="0"  Background="{TemplateBinding Background}" Foreground="Black" HorizontalAlignment="Stretch" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsEnabled="{TemplateBinding IsEnabled}" Padding="10,0,0,15" Height="42.575" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Width="60.953">
+                                <Button.RenderTransform>
+                                    <CompositeTransform SkewX="1.961" TranslateX="5.425"/>
+                                </Button.RenderTransform>
+                            </Button>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DatePickerStyle2" TargetType="DatePicker">
+            <Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ContentControlFontSize}"/>
+            <Setter Property="Foreground" Value="{ThemeResource DatePickerForegroundThemeBrush}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DatePicker">
+                        <StackPanel x:Name="LayoutRoot" Margin="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="HeaderContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Margin="0,0,0,-3" Style="{StaticResource HeaderContentPresenterStyle}"/>
+                            <Button x:Name="FlyoutButton" BorderBrush="Transparent" BorderThickness="2.5" Background="{TemplateBinding Background}" Foreground="Black" HorizontalAlignment="Stretch" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsEnabled="{TemplateBinding IsEnabled}" Padding="0,0,0,0" Margin="53,0,-2,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DatePickerStyle3" TargetType="DatePicker">
+            <Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{ThemeResource ContentControlFontSize}"/>
+            <Setter Property="Foreground" Value="{ThemeResource DatePickerForegroundThemeBrush}"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DatePicker">
+                        <StackPanel x:Name="LayoutRoot" Margin="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="HeaderContentPresenter" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" Margin="0,0,0,-3" Style="{StaticResource HeaderContentPresenterStyle}"/>
+                            <Button x:Name="FlyoutButton" BorderBrush="Transparent" BorderThickness="2.5" Background="{TemplateBinding Background}" Foreground="Black" HorizontalAlignment="Stretch" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsEnabled="{TemplateBinding IsEnabled}" Padding="0,0,0,0" Margin="53,0,-2,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <x:Double x:Key="ProgressRingThemeSize">57.5</x:Double>
+        <x:Double x:Key="ProgressRingElipseThemeSize">6.5</x:Double>
+        <Thickness x:Key="ProgressRingElipseThemeMargin">7.5</Thickness>
+        <x:Double x:Key="ProgressRingActiveBackgroundOpacity">0.8</x:Double>
+        <Style x:Key="ProgressRingStyle1" TargetType="ProgressRing">
+            <Setter Property="Background" Value="{ThemeResource PhoneBackgroundBrush}"/>
+            <Setter Property="Foreground" Value="{ThemeResource ProgressBarIndeterminateForegroundThemeBrush}"/>
+            <Setter Property="FontFamily" Value="{ThemeResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{ThemeResource TextStyleLargeFontSize}"/>
+            <Setter Property="MinHeight" Value="{ThemeResource ProgressRingThemeSize}"/>
+            <Setter Property="MinWidth" Value="{ThemeResource ProgressRingThemeSize}"/>
+            <Setter Property="IsHitTestVisible" Value="False"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressRing">
+                        <Grid>
+                            <Grid.Resources>
+                                <Style x:Key="ProgressRingEllipseStyle" TargetType="Ellipse">
+                                    <Setter Property="Width" Value="{ThemeResource ProgressRingElipseThemeSize}"/>
+                                    <Setter Property="Height" Value="{ThemeResource ProgressRingElipseThemeSize}"/>
+                                    <Setter Property="Margin" Value="{ThemeResource ProgressRingElipseThemeMargin}"/>
+                                    <Setter Property="Opacity" Value="0"/>
+                                </Style>
+                            </Grid.Resources>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="SizeStates">
+                                    <VisualState x:Name="Large">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="SixthCircle">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Small"/>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="ActiveStates">
+                                    <VisualState x:Name="Inactive"/>
+                                    <VisualState x:Name="Active">
+                                        <Storyboard RepeatBehavior="Forever">
+                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="BackgroundOverlay">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ProgressRingActiveBackgroundOpacity}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="Ring">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E1">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.167" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E2">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.334" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E3">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.501" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E4">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.668" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E5">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.835" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="E6">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.21" Value="1"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.22" Value="0"/>
+                                                <DiscreteDoubleKeyFrame KeyTime="0:0:3.47" Value="0"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="0" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E1R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-110"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="10"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="93"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="205"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="357"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="439"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="585"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.167" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E2R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-116"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="4"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="87"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="199"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="351"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="433"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="579"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.334" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E3R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-122"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="-2"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="81"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="193"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="345"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="427"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="573"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.501" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E4R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-128"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="-8"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="75"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="187"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="339"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="421"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="567"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.668" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E5R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-134"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="-14"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="69"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="181"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="331"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="415"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="561"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00.835" Storyboard.TargetProperty="Angle" Storyboard.TargetName="E6R">
+                                                <SplineDoubleKeyFrame KeySpline="0.13,0.21,0.1,0.7" KeyTime="0" Value="-140"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.02,0.33,0.38,0.77" KeyTime="0:0:0.433" Value="-20"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:1.2" Value="63"/>
+                                                <SplineDoubleKeyFrame KeySpline="0.57,0.17,0.95,0.75" KeyTime="0:0:1.617" Value="175"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0.19,0.07,0.72" KeyTime="0:0:2.017" Value="325"/>
+                                                <SplineDoubleKeyFrame KeyTime="0:0:2.783" Value="409"/>
+                                                <SplineDoubleKeyFrame KeySpline="0,0,0.95,0.37" KeyTime="0:0:3.217" Value="555"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="BackgroundOverlay" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Opacity="0" Grid.RowSpan="3"/>
+                            <Grid x:Name="Ring" Background="Transparent" FlowDirection="LeftToRight" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Height="{StaticResource ProgressRingThemeSize}" MaxWidth="{Binding TemplateSettings.MaxSideLength, RelativeSource={RelativeSource Mode=TemplatedParent}}" MaxHeight="{Binding TemplateSettings.MaxSideLength, RelativeSource={RelativeSource Mode=TemplatedParent}}" Grid.Row="1" RenderTransformOrigin=".5,.5" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="{StaticResource ProgressRingThemeSize}">
+                                <Canvas RenderTransformOrigin=".5,.5">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E1R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E1" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                                <Canvas RenderTransformOrigin=".5,.5">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E2R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E2" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                                <Canvas RenderTransformOrigin=".5,.5">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E3R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E3" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                                <Canvas RenderTransformOrigin=".5,.5">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E4R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E4" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                                <Canvas RenderTransformOrigin=".5,.5">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E5R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E5" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                                <Canvas x:Name="SixthCircle" RenderTransformOrigin=".5,.5" Visibility="Collapsed">
+                                    <Canvas.RenderTransform>
+                                        <RotateTransform x:Name="E6R"/>
+                                    </Canvas.RenderTransform>
+                                    <Ellipse x:Name="E6" Fill="{TemplateBinding Foreground}" Style="{StaticResource ProgressRingEllipseStyle}"/>
+                                </Canvas>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Center" Background="#193A67">
+            <Image Source="{Binding AccountBgImage}" VerticalAlignment="Stretch" Stretch="Fill"></Image>
+        </Grid>
+        <Grid x:Name="LayoutRoot" >
+            <Grid.Background>
+                <ImageBrush Stretch="None" ImageSource="Assets/Images/Home_b.jpg" AlignmentY="Top" AlignmentX="Center"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <Grid Grid.Row="0" Margin="0,0,0,0" Background="{Binding AccountBackground}">
+                <Grid Grid.Row="0" Margin="0,0,0,0" Background="{Binding AccountBackground}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <!--<ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>-->
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Column="0">
+                        <Image x:ConnectionId='13' Margin="10,0,0,0" Grid.Column="0" Source="Assets/hdpi/navigation_bar_back.png" Stretch="None" Height="45"                />
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Home" FontSize="20"  HorizontalAlignment="Center" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1">
+                        <TextBlock HorizontalAlignment="Center" Text="Bus Search" FontSize="20"  VerticalAlignment="Center"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
+                        <Image x:ConnectionId='12' x:Name="imgSearchHistory" Margin="0,0,20,0" Grid.Column="0" Source="Assets/hdpi/search_recent_searches.png" Stretch="None" Height="45"                                 />
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <Border CornerRadius="10,10,0,0" Grid.Row="1" Background="#173966" Margin="10,10,10,0">
+                <Grid x:Name="MyAccountTab"   >
+                    <Border Grid.Row="0" Background="White" CornerRadius="10,10,0,0" BorderBrush="Transparent" BorderThickness="1">
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="5"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0" Background="White" CornerRadius="10,10,0,0">
+                                <StackPanel x:ConnectionId='11' x:Name="tabOneWay"                           >
+                                    <TextBlock x:Name="lblOneWay" Margin="10" HorizontalAlignment="Center" Foreground="Black" FontSize="18" >One Way</TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <StackPanel x:Name="stackBlue" Grid.Column="0" Background="Blue" Grid.Row="1"></StackPanel>
+                            <Border Background="Transparent" CornerRadius="0,10,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,0,0.333,0.333" Width="189">
+                                <StackPanel x:ConnectionId='10' x:Name="tabRoundTrip"                              >
+                                    <TextBlock x:Name="lblRoundTrip" Margin="10"  HorizontalAlignment="Center" Foreground="Black" FontSize="18" >Round Trip</TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <StackPanel x:Name="stackBlueOne" Grid.Column="1" Background="Blue" Grid.Row="1" Visibility="Collapsed"></StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border CornerRadius="0,0,10,10" Grid.Row="2" Background="#E4E4E4" Margin="10,0,10,0">
+                <Grid x:Name="ContentPanel" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="OneWayGrid" Grid.Row="0" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" Visibility="Visible" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,10,5,0">
+                            <StackPanel x:Name="OneWayStackPanel" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel x:ConnectionId='8' x:Name="tapfromlocationsearch" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                      >
+                                        <TextBlock x:Name="lblSourceNameoneway" Style="{StaticResource MarginTop10}" Text="Select" Foreground="Black" TextAlignment="Center" TextWrapping="Wrap"  FontSize="22" HorizontalAlignment="Center" />
+                                        <TextBlock Visibility="Collapsed" x:Name="lblSourceIDNameoneway"   />
+                                        <TextBlock Visibility="Collapsed" x:Name="lblSourceCodeNameoneway"   />
+
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Source" Foreground="#A5A5A5" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18"/>
+                                    </StackPanel>
+                                    <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,6,0,6.5" Width="50">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Border BorderBrush="Black" Grid.Column="0" Grid.Row="0">
+                                            <Image x:Name="SelectRoot" Visibility="Visible" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Source="Assets/hdpi/search_one_way_arrow.png"></Image>
+                                        </Border>
+                                    </Grid>
+                                    <StackPanel x:ConnectionId='9' x:Name="taptolocationsearch" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center"                                    >
+                                        <TextBlock x:Name="lblDestinationNameoneway" Style="{StaticResource MarginTop10}" Text="Select" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="22" />
+                                        <TextBlock Visibility="Collapsed" x:Name="lblDestinationIDNameoneway"   />
+                                        <TextBlock Visibility="Collapsed" x:Name="lblDestinationCodeNameoneway"   />
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Destination" HorizontalAlignment="Center" Foreground="#A5A5A5" TextAlignment="Left" TextWrapping="Wrap" FontSize="18"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <!--<Border Grid.Row="1" CornerRadius="5,5,5,5" BorderBrush="Wheat" Background="white" BorderThickness="2" VerticalAlignment="Top">-->
+                        <Border Grid.Row="1" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,7,0,0" HorizontalAlignment="Left" Width="360">
+                            <StackPanel x:Name="OneWayStackPanelBottom" Grid.Row="1" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}">
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel x:ConnectionId='6' Grid.Row="0"  Grid.Column="0" VerticalAlignment="Center"                           >
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Depart on" HorizontalAlignment="Center"  Foreground="#A5A5A5" TextAlignment="Center" TextWrapping="Wrap" FontSize="18"/>
+                                        <DatePicker Margin="50,0,0,0" x:Name="arrivalDatePicker" DayFormat="{}{dayofweek.solo.abbreviated}" YearVisible="True" Foreground="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Header="Arrival Date" Height="30" Style="{StaticResource DatePickerStyle1}"/>
+                                        <Image   HorizontalAlignment="Left"  Margin="40,-20,0,0" Source="Assets/hdpi/field_calendar.png" Height="22" Width="22" ></Image>
+
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Stretch">
+                                        <Grid Background="LightGray" Width="2" Visibility="Visible"></Grid>
+                                    </StackPanel>
+                                    <StackPanel x:ConnectionId='7' x:Name="tabgreatSaving" Grid.Row="0"  Grid.Column="2" VerticalAlignment="Center"                               >
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Book a round trip for" HorizontalAlignment="Center" Foreground="#A5A5A5" TextAlignment="Left" TextWrapping="Wrap" FontSize="18" Margin="3,10,-13.833,0" Width="185"/>
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="GREAT SAVINGS" HorizontalAlignment="Center" Foreground="#32C25B" TextAlignment="Center" TextWrapping="Wrap"   FontSize="22"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <!--</Border>-->
+                        <Border Grid.Row="2" CornerRadius="10,10,10,10" BorderBrush="Transparent" Background="Transparent" BorderThickness="2" VerticalAlignment="Top" Height="100">
+                            <Border x:ConnectionId='5' Width="Auto"                        CornerRadius="10,10,10,10" Margin="50,25,50,20" BorderBrush="blue" Background="#000099">
+                                <!--<Button Grid.Row="2" Click="Button_Click" BorderBrush="Transparent" Background="Transparent"  FontSize="15" HorizontalAlignment="Center" Margin="-27,-22,-23,-23" Width="Auto" Height="Auto">-->
+                                <TextBlock Text="Search" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                <!--</Button>-->
+                            </Border>
+                        </Border>
+                    </Grid>
+
+                    <Grid x:Name="ReturnGrid" Grid.Row="0" Background="#E4E4E4" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" Visibility="Collapsed" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="150"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,10,5,0">
+                            <StackPanel x:Name="ReturnStackPanel" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel x:ConnectionId='3' x:Name="tabfromlocationsearchreturn" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                            >
+                                        <TextBlock x:Name="lblSourcrReturnName" Style="{StaticResource MarginTop10}" Text="Select" Foreground="Black" TextAlignment="Center" TextWrapping="Wrap" FontSize="22" HorizontalAlignment="Center" />
+
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Source" Foreground="#A5A5A5" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="18"/>
+                                    </StackPanel>
+                                    <Grid Grid.Column="1" VerticalAlignment="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Border BorderBrush="Black" Grid.Column="0" Grid.Row="0">
+                                            <Image x:Name="SelectRootReturn" Visibility="Visible" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Source="Assets/hdpi/Round.png"></Image>
+                                        </Border>
+                                    </Grid>
+                                    <StackPanel x:ConnectionId='4' x:Name="tabtolocationsearchreturn" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center"                                          >
+                                        <TextBlock x:Name="lblDestReturnName" Style="{StaticResource MarginTop10}" Text="Select" HorizontalAlignment="Center" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="22" />
+
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Destination" HorizontalAlignment="Center" Foreground="#A5A5A5" TextAlignment="Left" TextWrapping="Wrap" FontSize="18"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+
+                        <!--<Border Grid.Row="1" CornerRadius="5,5,5,5" BorderBrush="Wheat" Background="white" BorderThickness="2" VerticalAlignment="Top">-->
+                        <Border Grid.Row="1" CornerRadius="5,5,5,5" Background="White" BorderBrush="White" BorderThickness="5" Margin="5,7,5,0">
+                            <StackPanel x:Name="ReturnStackPanelBottom" Grid.Row="1" Orientation="Vertical" Background="white" VerticalAlignment="Center" DataContext="{Binding}">
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0"  Grid.Column="0" VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Depart on" HorizontalAlignment="Center"  Foreground="#A5A5A5" TextAlignment="Center" TextWrapping="Wrap" FontSize="18"/>
+                                        <DatePicker Margin="20,0,0,0" x:Name="roundTripDepartDatePicker" Style="{StaticResource DatePickerStyle2}" />
+                                        <Image   HorizontalAlignment="Left"  Margin="45,-60,0,0" Source="Assets/hdpi/field_calendar.png" Height="22" Width="22" ></Image>
+
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Row="0"  Grid.Column="1" VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource MarginTop10}" Text="Return on" HorizontalAlignment="Center"  Foreground="#A5A5A5" TextAlignment="Center" TextWrapping="Wrap" FontSize="18"/>
+                                        <DatePicker Margin="20,0,0,0" x:Name="roundTripreturnDatePicker" Style="{StaticResource DatePickerStyle3}" />
+                                        <Image   HorizontalAlignment="Left"  Margin="45,-60,0,0" Source="Assets/hdpi/field_calendar.png" Height="22" Width="22" ></Image>
+
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                        <!--</Border>-->
+
+                        <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                            <Border x:ConnectionId='2' Width="250" x:Name="tapSearchReturn"                                 CornerRadius="5,5,5,5" Margin="0,20,0,20" Height="50"  BorderBrush="blue" Background="#000099">
+                                <TextBlock Text="Search" FontSize="20" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Border >
+
+            <Grid Visibility="Collapsed" x:Name="cal" >
+                <!--<tolls:Calendar x:Name="calander"  DisplayDateChanged="calander_DisplayDateChanged" RequestedTheme="Light" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10,0" CacheMode="BitmapCache" Grid.RowSpan="3"/>-->
+                <!--<tolls:Calendar x:Name="calander"  DisplayDateChanged="calander_DisplayDateChanged" RequestedTheme="Light" Margin="10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10,0" CacheMode="BitmapCache" Grid.RowSpan="3"/>-->
+            </Grid>
+
+            <Grid x:Name="ErrorPopup" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Collapsed">
+                <Grid Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Visible" Background="Gray" Opacity="0.4">
+                </Grid>
+                <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="White" Height="130" Width="250">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <ProgressRing x:Name="progress1" Grid.Row="0" Height="45" Width="15" VerticalAlignment="Center" HorizontalAlignment="Center" IsActive="True" Background="White" Style="{StaticResource ProgressRingStyle1}" Margin="96,10,96,10"/>
+                    <Grid Background="Gray" Grid.Row="1" Height="1"></Grid>
+                    <TextBlock FontSize="15" Grid.Row="2" Margin="0,10,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Gray" Text="Please wait while loading places "></TextBlock>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="PopupValidation" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Collapsed">
+                <Grid Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Visibility="Visible" Background="Gray" Opacity="0.4">
+                </Grid>
+                <Grid Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Background="White" Height="100" Width="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Please select source and destination" TextWrapping="Wrap" HorizontalAlignment="Center" Grid.Row="0" FontSize="15" Foreground="Black"  Margin="0,20,0,0"/>
+                    <Grid Height="1" Margin="0,20,0,0" Background="Gray" Grid.Row="1"></Grid>
+                    <StackPanel x:ConnectionId='1' x:Name="tapCloseValidationPopup" Margin="10" Grid.Row="2"                                        >
+                        <TextBlock Text="OK" HorizontalAlignment="Center" Foreground="Black"  FontSize="14" FontWeight="Light"  VerticalAlignment="Center" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>
+

@@ -1,0 +1,138 @@
+﻿<Page
+    x:Class="BusIndia_Universal.FeedBack"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Name="WhiteBoxVaule" TargetType="StackPanel">
+            <Setter Property="Background" Value="AntiqueWhite"></Setter>
+            <!--<Setter Property="Margin" Value="10,0,10,0"></Setter>-->
+        </Style>
+        <Style x:Name="ContentText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Black"></Setter>
+            <Setter Property="Margin" Value="0,10,0,0"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+        <Style x:Name="RatingStyle" TargetType="Image">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--TitlePanel contains the name of the application and page title-->
+        <Grid Grid.Row="0" Margin="0,0,0,0" Background="#173966">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--<ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>-->
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Image x:ConnectionId='17' Margin="10,0,0,0" Source="Assets/hdpi/navigation_bar_back.png" Stretch="None" Height="45"                 />
+            <TextBlock Text="Home" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </StackPanel>
+            <TextBlock Text="Feed Back" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1"  Background="#173966">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalAlignment="Stretch" Margin="5" DataContext="{Binding}" >
+                <Border CornerRadius="20,20,20,20" BorderBrush="White" Background="White" BorderThickness="2" VerticalAlignment="Stretch">
+                    <StackPanel Margin="10,0,10,0" x:Name="ContentStackPanel" Orientation="Vertical"  VerticalAlignment="Stretch" DataContext="{Binding}">
+                        <TextBlock x:Name="Instructions" Style="{StaticResource ContentText}" >
+                            Share your experience with us and help us Improve <Bold> Busindia </Bold>
+                        </TextBlock>
+                        <TextBlock Style="{StaticResource ContentText}" FontWeight="Bold" FontSize="15">Please select your product</TextBlock>
+                        <ComboBox  x:Name="listGender" PlaceholderText="None" BorderBrush="#8B8B8B" BorderThickness="1" Foreground="Black">
+                            <ComboBoxItem>Product1</ComboBoxItem>
+                            <ComboBoxItem>Product2</ComboBoxItem>
+                            <ComboBoxItem>Product3</ComboBoxItem>
+                            <ComboBoxItem>Product4</ComboBoxItem>
+                        </ComboBox>
+                        <Grid  HorizontalAlignment="Stretch"  Margin="0,20,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Text="Usefullness"  Width="Auto" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="20"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="10,0,0,0">
+                                <Image x:ConnectionId='12' x:Name="usefullness1" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                            ></Image>
+                                <Image x:ConnectionId='13' x:Name="usefullness2" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                            ></Image>
+                                <Image x:ConnectionId='14' x:Name="usefullness3" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                            ></Image>
+                                <Image x:ConnectionId='15' x:Name="usefullness4" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                            ></Image>
+                                <Image x:ConnectionId='16' x:Name="usefullness5" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                            ></Image>
+                            </StackPanel>
+                        </Grid>
+                        <Grid  HorizontalAlignment="Stretch"  Margin="0,20,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Text="Ease of use"  Width="Auto" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="20"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="10,0,0,0">
+                                <Image x:ConnectionId='7' x:Name="EaseofUse1" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                          ></Image>
+                                <Image x:ConnectionId='8' x:Name="EaseofUse2" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                          ></Image>
+                                <Image x:ConnectionId='9' x:Name="EaseofUse3" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                          ></Image>
+                                <Image x:ConnectionId='10' x:Name="EaseofUse4" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                          ></Image>
+                                <Image x:ConnectionId='11' x:Name="EaseofUse5" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                          ></Image>
+                            </StackPanel>
+                        </Grid>
+                        <Grid  HorizontalAlignment="Stretch"  Margin="0,20,10,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Margin="10,10,0,0" Text="Design"  Width="Auto" Foreground="Black" TextAlignment="Left" TextWrapping="Wrap" FontSize="20"/>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="10,0,0,0">
+                                <Image x:ConnectionId='2' x:Name="Design1" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                       ></Image>
+                                <Image x:ConnectionId='3' x:Name="Design2" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                       ></Image>
+                                <Image x:ConnectionId='4'  x:Name="Design3" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                       ></Image>
+                                <Image x:ConnectionId='5'  x:Name="Design4" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                       ></Image>
+                                <Image x:ConnectionId='6'  x:Name="Design5" Style="{StaticResource RatingStyle}" Source="Assets/hdpi/feed_back_smiley_enabled.png" Height="35" Width="35"                       ></Image>
+                            </StackPanel>
+                        </Grid>
+                        <TextBox BorderBrush="Black" x:Name="txtfeedback" PlaceholderText="Share your thoughts..." AcceptsReturn="True" Height="150" MaxHeight="150" Text="{Binding FeedbackText,Mode=TwoWay}"></TextBox>
+                        <Button x:ConnectionId='1'                        Background="#000099" BorderBrush="#000099" BorderThickness="2" HorizontalAlignment="Stretch">
+                            Submit
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--<StackPanel Orientation="Vertical" Grid.Row="0">
+                    <toolkit:PhoneTextBox Hint="Email Address" Text="" Name="TxtEmail"/>
+                    <toolkit:PhoneTextBox Hint="Password" Text="" Name="txtPassword"/>
+                    <Button Content="Log in" Click="Button_Click"></Button>
+                </StackPanel>-->
+        </Grid>
+    </Grid>
+</Page>
+

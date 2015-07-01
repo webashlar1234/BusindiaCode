@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WEBASHLAR-10</Machine>
+    <WindowsUser>WebAshlar</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>6b298ada-6b05-45d9-b7d4-a713a770a93f</PackageIdentityName>
+    <IntermediateOutputPath>D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusIndia_Universal.WindowsPhone.exe">
+      <PackagePath>BusIndia_Universal.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\SlideView.1.4.2\lib\wpa81\SlideView.Library.dll">
+      <PackagePath>SlideView.Library.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\WebServiceClassLiberary\obj\Debug\WebServiceClassLiberary.dll">
+      <PackagePath>WebServiceClassLiberary.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Core.dll">
+      <PackagePath>WinPhoneControls.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Input.dll">
+      <PackagePath>WinPhoneControls.Input.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Primitives.dll">
+      <PackagePath>WinPhoneControls.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar.dll">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.dll">
+      <PackagePath>WinRTXamlToolkit.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\BackBimg.png">
+      <PackagePath>Assets\hdpi\BackBimg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\booking_filter.png">
+      <PackagePath>Assets\hdpi\booking_filter.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\btn1.png">
+      <PackagePath>Assets\hdpi\btn1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\btn2.png">
+      <PackagePath>Assets\hdpi\btn2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\btn3.png">
+      <PackagePath>Assets\hdpi\btn3.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\close.png">
+      <PackagePath>Assets\hdpi\close.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\close_white.png">
+      <PackagePath>Assets\hdpi\close_white.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\cross.png">
+      <PackagePath>Assets\hdpi\cross.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\cross_newroom.png">
+      <PackagePath>Assets\hdpi\cross_newroom.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\feed_back_smiley_disabled.png">
+      <PackagePath>Assets\hdpi\feed_back_smiley_disabled.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\feed_back_smiley_enabled.png">
+      <PackagePath>Assets\hdpi\feed_back_smiley_enabled.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\field_calendar.png">
+      <PackagePath>Assets\hdpi\field_calendar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\field_drop_down.png">
+      <PackagePath>Assets\hdpi\field_drop_down.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\field_tick.png">
+      <PackagePath>Assets\hdpi\field_tick.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\filter.png">
+      <PackagePath>Assets\hdpi\filter.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_logged_in.png">
+      <PackagePath>Assets\hdpi\home_logged_in.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_menu.png">
+      <PackagePath>Assets\hdpi\home_menu.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_navigation_bar_logo.png">
+      <PackagePath>Assets\hdpi\home_navigation_bar_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_not_logged_in.png">
+      <PackagePath>Assets\hdpi\home_not_logged_in.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_tab_bar_bus.png">
+      <PackagePath>Assets\hdpi\home_tab_bar_bus.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_tab_bar_cabs.png">
+      <PackagePath>Assets\hdpi\home_tab_bar_cabs.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_tab_bar_hotels.png">
+      <PackagePath>Assets\hdpi\home_tab_bar_hotels.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_travel_card_bus.png">
+      <PackagePath>Assets\hdpi\home_travel_card_bus.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_travel_card_cabs.png">
+      <PackagePath>Assets\hdpi\home_travel_card_cabs.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\home_travel_card_distance.png">
+      <PackagePath>Assets\hdpi\home_travel_card_distance.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\Img_Close.png">
+      <PackagePath>Assets\hdpi\Img_Close.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\KRTC.png">
+      <PackagePath>Assets\hdpi\KRTC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\line.png">
+      <PackagePath>Assets\hdpi\line.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\lines.png">
+      <PackagePath>Assets\hdpi\lines.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\login_back.png">
+      <PackagePath>Assets\hdpi\login_back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\login_close.png">
+      <PackagePath>Assets\hdpi\login_close.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\login_facebook.png">
+      <PackagePath>Assets\hdpi\login_facebook.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\login_google.png">
+      <PackagePath>Assets\hdpi\login_google.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\login_logo.png">
+      <PackagePath>Assets\hdpi\login_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\MapK.png">
+      <PackagePath>Assets\hdpi\MapK.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_bus.png">
+      <PackagePath>Assets\hdpi\menu_bus.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_cabs.png">
+      <PackagePath>Assets\hdpi\menu_cabs.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_feed_back.png">
+      <PackagePath>Assets\hdpi\menu_feed_back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_hotel.png">
+      <PackagePath>Assets\hdpi\menu_hotel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_logo.png">
+      <PackagePath>Assets\hdpi\menu_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_my_account.png">
+      <PackagePath>Assets\hdpi\menu_my_account.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_my_itineraries.png">
+      <PackagePath>Assets\hdpi\menu_my_itineraries.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_my_trips.png">
+      <PackagePath>Assets\hdpi\menu_my_trips.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_rate_us.png">
+      <PackagePath>Assets\hdpi\menu_rate_us.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\menu_share_it.png">
+      <PackagePath>Assets\hdpi\menu_share_it.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\my_account_blue_card.png">
+      <PackagePath>Assets\hdpi\my_account_blue_card.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\my_account_gold_card.png">
+      <PackagePath>Assets\hdpi\my_account_gold_card.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\my_account_silver_card.png">
+      <PackagePath>Assets\hdpi\my_account_silver_card.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\navigation_bar_back.png">
+      <PackagePath>Assets\hdpi\navigation_bar_back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\NextArrow.png">
+      <PackagePath>Assets\hdpi\NextArrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\offer_close.png">
+      <PackagePath>Assets\hdpi\offer_close.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\Round.png">
+      <PackagePath>Assets\hdpi\Round.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\search.png">
+      <PackagePath>Assets\hdpi\search.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\SearchLocation.png">
+      <PackagePath>Assets\hdpi\SearchLocation.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\search_one_way_arrow.png">
+      <PackagePath>Assets\hdpi\search_one_way_arrow.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\search_recent_searches.png">
+      <PackagePath>Assets\hdpi\search_recent_searches.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\search_round_trip_arrows.png">
+      <PackagePath>Assets\hdpi\search_round_trip_arrows.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\splash_background.png">
+      <PackagePath>Assets\hdpi\splash_background.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\splash_india_outline.png">
+      <PackagePath>Assets\hdpi\splash_india_outline.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\splash_logo.png">
+      <PackagePath>Assets\hdpi\splash_logo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\splash_services.png">
+      <PackagePath>Assets\hdpi\splash_services.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\star.png">
+      <PackagePath>Assets\hdpi\star.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\StarRating.png">
+      <PackagePath>Assets\hdpi\StarRating.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\rupee.png">
+      <PackagePath>Assets\Images\rupee.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_booked_berth.png">
+      <PackagePath>Assets\Seats\ss_booked_berth.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_booked_ladies_berth.png">
+      <PackagePath>Assets\Seats\ss_booked_ladies_berth.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_booked_ladies_seat.png">
+      <PackagePath>Assets\Seats\ss_booked_ladies_seat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_booked_seat.png">
+      <PackagePath>Assets\Seats\ss_booked_seat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_empty_berth.png">
+      <PackagePath>Assets\Seats\ss_empty_berth.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_empty_seat.png">
+      <PackagePath>Assets\Seats\ss_empty_seat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_legend.png">
+      <PackagePath>Assets\Seats\ss_legend.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_selected_berth.png">
+      <PackagePath>Assets\Seats\ss_selected_berth.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Seats\ss_selected_seat.png">
+      <PackagePath>Assets\Seats\ss_selected_seat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Tiles\FlipCycleTileLarge.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Tiles\FlipCycleTileMedium.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileMedium.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Tiles\FlipCycleTileSmall.png">
+      <PackagePath>Assets\Tiles\FlipCycleTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Tiles\IconicTileMediumLarge.png">
+      <PackagePath>Assets\Tiles\IconicTileMediumLarge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Tiles\IconicTileSmall.png">
+      <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Toolkit.Content\ApplicationBar.Cancel.png">
+      <PackagePath>Toolkit.Content\ApplicationBar.Cancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Toolkit.Content\ApplicationBar.Check.png">
+      <PackagePath>Toolkit.Content\ApplicationBar.Check.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Toolkit.Content\ApplicationBar.Delete.png">
+      <PackagePath>Toolkit.Content\ApplicationBar.Delete.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Toolkit.Content\ApplicationBar.Select.png">
+      <PackagePath>Toolkit.Content\ApplicationBar.Select.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\Cartest.jpg">
+      <PackagePath>Assets\hdpi\Cartest.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\HotelRoom_test.jpg">
+      <PackagePath>Assets\hdpi\HotelRoom_test.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\Hotel_test.jpg">
+      <PackagePath>Assets\hdpi\Hotel_test.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\hdpi\splash.jpg">
+      <PackagePath>Assets\hdpi\splash.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_a.jpg">
+      <PackagePath>Assets\Images\Home_a.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_a_blur.jpg">
+      <PackagePath>Assets\Images\Home_a_blur.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_b.jpg">
+      <PackagePath>Assets\Images\Home_b.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_b_blur.jpg">
+      <PackagePath>Assets\Images\Home_b_blur.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_c.jpg">
+      <PackagePath>Assets\Images\Home_c.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_c_blur.jpg">
+      <PackagePath>Assets\Images\Home_c_blur.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_d.jpg">
+      <PackagePath>Assets\Images\Home_d.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Assets\Images\Home_d_blur.jpg">
+      <PackagePath>Assets\Images\Home_d_blur.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Listofservice.xml">
+      <PackagePath>Listofservice.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\commanXml.xml">
+      <PackagePath>commanXml.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\XMLFile1.xml">
+      <PackagePath>XMLFile1.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Xml\GetAvailableService.xml">
+      <PackagePath>Xml\GetAvailableService.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\Xml\XMLFile1.xml">
+      <PackagePath>Xml\XMLFile1.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\README_FIRST.txt">
+      <PackagePath>README_FIRST.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\Splash.xbf">
+      <PackagePath>Splash.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusAvailibility.xbf">
+      <PackagePath>BusAvailibility.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusBookingSummary.xbf">
+      <PackagePath>BusBookingSummary.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusConfirmation.xbf">
+      <PackagePath>BusConfirmation.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusPickDropPoint.xbf">
+      <PackagePath>BusPickDropPoint.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusSearch.xbf">
+      <PackagePath>BusSearch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusSearchArrivalCity.xbf">
+      <PackagePath>BusSearchArrivalCity.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusSearchDepartureCity.xbf">
+      <PackagePath>BusSearchDepartureCity.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusSearchHistory.xbf">
+      <PackagePath>BusSearchHistory.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusSeatSelection.xbf">
+      <PackagePath>BusSeatSelection.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\CabBookingSummary.xbf">
+      <PackagePath>CabBookingSummary.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\CabSearch.xbf">
+      <PackagePath>CabSearch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\CabSearchCity.xbf">
+      <PackagePath>CabSearchCity.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\CabSearchHistory.xbf">
+      <PackagePath>CabSearchHistory.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\CabSearchResult.xbf">
+      <PackagePath>CabSearchResult.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\FeedBack.xbf">
+      <PackagePath>FeedBack.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\Home.xbf">
+      <PackagePath>Home.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelAvailibility.xbf">
+      <PackagePath>HotelAvailibility.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelBookingSummary.xbf">
+      <PackagePath>HotelBookingSummary.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelDetails.xbf">
+      <PackagePath>HotelDetails.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelSearchCity.xbf">
+      <PackagePath>HotelSearchCity.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelSearchHistory.xbf">
+      <PackagePath>HotelSearchHistory.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelSearchPage.xbf">
+      <PackagePath>HotelSearchPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\HotelSelection.xbf">
+      <PackagePath>HotelSelection.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\LoginBusindia.xbf">
+      <PackagePath>LoginBusindia.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\LoginMain.xbf">
+      <PackagePath>LoginMain.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\MyAccount.xbf">
+      <PackagePath>MyAccount.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\MyItinerary.xbf">
+      <PackagePath>MyItinerary.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\OfferPopup.xbf">
+      <PackagePath>OfferPopup.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\PasangerInformation.xbf">
+      <PackagePath>PasangerInformation.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\PaymentOptionsPage.xbf">
+      <PackagePath>PaymentOptionsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\ReceiptPage.xbf">
+      <PackagePath>ReceiptPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\RegisterBusIndia.xbf">
+      <PackagePath>RegisterBusIndia.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\styles\Styles.xbf">
+      <PackagePath>styles\Styles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\Test.xbf">
+      <PackagePath>Test.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\TripSearch.xbf">
+      <PackagePath>TripSearch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\BusIndia_Universal.WindowsPhone.xr.xml">
+      <PackagePath>BusIndia_Universal.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\obj\Debug\BusIndia_Universal.Windows.exe">
+      <PackagePath>BusIndia_Universal.Windows.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
+      <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AlternativeFrame\AlternativeFrame.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AnimatingContainer\AnimatingContainer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\AutoCompleteTextBox\AutoCompleteTextBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\AutoCompleteTextBox\AutoCompleteTextBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CameraCaptureControl\CameraCaptureControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CascadingImageControl\CascadingImageControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CascadingTextBlock\CascadingTextBlock.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ColorPicker\ColorPicker.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CountdownControl\CountdownControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\CustomGridSplitter\CustomGridSplitter.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\DelayedLoadControl\DelayedLoadControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\FocusVisualizer\FocusVisualizer.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\FocusVisualizer\FocusVisualizer.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\FxContentControl\FxContentControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ImageButton\ImageButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ImageToggleButton\ImageToggleButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\InputDialog\InputDialog.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ListItemButton\ListItemButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\NumericUpDown\NumericUpDown.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ToolStrip\ToolStrip.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ToolStrip\ToolStrip.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\ToolWindow\ToolWindow.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeView.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewItem.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewMouse.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\TreeView\TreeViewTouch.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\WatermarkPasswordBox\WatermarkPasswordBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf">
+      <PackagePath>WinRTXamlToolkit\Controls\WatermarkTextBox\WatermarkTextBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit\Themes\Generic.xbf">
+      <PackagePath>WinRTXamlToolkit\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\WinRTXamlToolkit.Controls.Calendar.xr.xml">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\WinRTXamlToolkit.Controls.Calendar.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\Calendar.xbf">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\Calendar.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarButton.xbf">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarDayButton.xbf">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarDayButton.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarItem.xbf">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\Controls\Calendar\CalendarItem.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinRTXamlToolkit.Controls.Calendar.WindowsPhone.1.8.1.0\lib\wpa\WinRTXamlToolkit.Controls.Calendar\Themes\Generic.xbf">
+      <PackagePath>WinRTXamlToolkit.Controls.Calendar\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.WindowsPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

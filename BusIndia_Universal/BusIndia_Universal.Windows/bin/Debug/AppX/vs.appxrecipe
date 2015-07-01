@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WEBASHLAR-10</Machine>
+    <WindowsUser>WebAshlar</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>51825477-104e-46b6-a62d-7f1fce5dce45</PackageIdentityName>
+    <IntermediateOutputPath>D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>04E76E4E310780E7F0DE3DEAD2E19CB66A254BCD9200A789D40303E14A765CE0</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>51825477-104e-46b6-a62d-7f1fce5dce45_1.0.0.0_neutral__0533df7cc3r16</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>51825477-104e-46b6-a62d-7f1fce5dce45_0533df7cc3r16!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>51825477-104e-46b6-a62d-7f1fce5dce45</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=WebAshlar</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-07T09:41:23.886</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\BusIndia_Universal.Windows.exe">
+      <PackagePath>BusIndia_Universal.Windows.exe</PackagePath>
+      <Modified>2015-05-07T11:48:15.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Core.dll">
+      <PackagePath>WinPhoneControls.Core.dll</PackagePath>
+      <Modified>2015-04-01T07:55:49.645</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Input.dll">
+      <PackagePath>WinPhoneControls.Input.dll</PackagePath>
+      <Modified>2015-04-01T07:55:49.667</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\packages\WinPhoneControls.1.0.1\lib\WinPhoneControls.Primitives.dll">
+      <PackagePath>WinPhoneControls.Primitives.dll</PackagePath>
+      <Modified>2015-04-01T07:55:49.690</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T15:36:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T15:36:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T15:36:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-12T15:36:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-05-07T06:34:41.944</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\Splash.xbf">
+      <PackagePath>Splash.xbf</PackagePath>
+      <Modified>2015-05-07T06:34:41.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-05-07T06:34:41.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\test.xbf">
+      <PackagePath>test.xbf</PackagePath>
+      <Modified>2015-05-07T06:34:41.950</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\BusIndia_Universal.Windows.xr.xml">
+      <PackagePath>BusIndia_Universal.Windows.xr.xml</PackagePath>
+      <Modified>2015-04-29T09:44:55.648</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\BackupBusIndia\BusIndia_Universal_17-04-15\BusIndia_Universal\BusIndia_Universal.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-05-07T09:41:23.794</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

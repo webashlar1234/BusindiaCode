@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="com.busindia.webservices" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="BusWebService" targetNamespace="com.busindia.webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="com.busindia.webservices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="ConfirmBooking" type="tns:ConfirmBooking" />
+      <xs:element name="ConfirmBookingResponse" type="tns:ConfirmBookingResponse" />
+      <xs:element name="ConfirmFullCancellation" type="tns:ConfirmFullCancellation" />
+      <xs:element name="ConfirmFullCancellationResponse" type="tns:ConfirmFullCancellationResponse" />
+      <xs:element name="ConfirmPartialCancellation" type="tns:ConfirmPartialCancellation" />
+      <xs:element name="ConfirmPartialCancellationResponse" type="tns:ConfirmPartialCancellationResponse" />
+      <xs:element name="GetAttachedStus" type="tns:GetAttachedStus" />
+      <xs:element name="GetAttachedStusResponse" type="tns:GetAttachedStusResponse" />
+      <xs:element name="GetAvailableServices" type="tns:GetAvailableServices" />
+      <xs:element name="GetAvailableServicesResponse" type="tns:GetAvailableServicesResponse" />
+      <xs:element name="GetBoardingPoints" type="tns:GetBoardingPoints" />
+      <xs:element name="GetBoardingPointsResponse" type="tns:GetBoardingPointsResponse" />
+      <xs:element name="GetCurrentDate" type="tns:GetCurrentDate" />
+      <xs:element name="GetCurrentDateResponse" type="tns:GetCurrentDateResponse" />
+      <xs:element name="GetDepositBalance" type="tns:GetDepositBalance" />
+      <xs:element name="GetDepositBalanceResponse" type="tns:GetDepositBalanceResponse" />
+      <xs:element name="GetDetailsForCancellation" type="tns:GetDetailsForCancellation" />
+      <xs:element name="GetDetailsForCancellationResponse" type="tns:GetDetailsForCancellationResponse" />
+      <xs:element name="GetIDProofs" type="tns:GetIDProofs" />
+      <xs:element name="GetIDProofsResponse" type="tns:GetIDProofsResponse" />
+      <xs:element name="GetLoginUserStatus" type="tns:GetLoginUserStatus" />
+      <xs:element name="GetLoginUserStatusResponse" type="tns:GetLoginUserStatusResponse" />
+      <xs:element name="GetPlaceList" type="tns:GetPlaceList" />
+      <xs:element name="GetPlaceListResponse" type="tns:GetPlaceListResponse" />
+      <xs:element name="GetRegisterUserStatus" type="tns:GetRegisterUserStatus" />
+      <xs:element name="GetRegisterUserStatusResponse" type="tns:GetRegisterUserStatusResponse" />
+      <xs:element name="GetSeatlayout" type="tns:GetSeatlayout" />
+      <xs:element name="GetSeatlayoutResponse" type="tns:GetSeatlayoutResponse" />
+      <xs:element name="GetTicketStatusDetails" type="tns:GetTicketStatusDetails" />
+      <xs:element name="GetTicketStatusDetailsResponse" type="tns:GetTicketStatusDetailsResponse" />
+      <xs:element name="GetTxnDetails" type="tns:GetTxnDetails" />
+      <xs:element name="GetTxnDetailsResponse" type="tns:GetTxnDetailsResponse" />
+      <xs:element name="TentativeBookings" type="tns:TentativeBookings" />
+      <xs:element name="TentativeBookingsResponse" type="tns:TentativeBookingsResponse" />
+      <xs:complexType name="GetLoginUserStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:loginUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loginUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetLoginUserStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GetLoginUserStatus" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="wsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+          <xs:element minOccurs="0" name="statusCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetIDProofs">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:idProofRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="idProofRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="stuIDs" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="wsUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="franchUserID" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="userID" type="xs:string" />
+          <xs:element minOccurs="0" name="userKey" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+          <xs:element minOccurs="0" name="userRole" type="xs:string" />
+          <xs:element minOccurs="0" name="userStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="userType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetIDProofsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IDProofResponse" type="tns:idProofResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="idProofResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="idProofs" nillable="true" type="tns:idProof" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="idProof">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="idProofID" type="xs:string" />
+          <xs:element minOccurs="0" name="idProofName" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDepositBalance">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDepositBalanceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DepositBalance" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TentativeBookings">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:tentativeBookingRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="tentativeBookingRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="seatBlock" type="tns:seatBlock" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seatBlock">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arrivalDate" type="xs:string" />
+          <xs:element minOccurs="0" name="arrivalTime" type="xs:string" />
+          <xs:element minOccurs="0" name="biFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="boardingPoint" type="tns:boardingPoints" />
+          <xs:element minOccurs="0" name="busID" type="xs:string" />
+          <xs:element minOccurs="0" name="classID" type="xs:string" />
+          <xs:element minOccurs="0" name="classLayoutID" type="xs:string" />
+          <xs:element minOccurs="0" name="className" type="xs:string" />
+          <xs:element minOccurs="0" name="corpCode" type="xs:string" />
+          <xs:element minOccurs="0" name="departureTime" type="xs:string" />
+          <xs:element minOccurs="0" name="distance" type="xs:string" />
+          <xs:element minOccurs="0" name="dropOffPoint" type="tns:boardingPoints" />
+          <xs:element minOccurs="0" name="idProofLookupID" type="xs:string" />
+          <xs:element minOccurs="0" name="idProofName" type="xs:string" />
+          <xs:element minOccurs="0" name="idProofReference" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="passengerAddress" type="tns:passengerAddress" />
+          <xs:element minOccurs="0" name="returnServiceID" type="xs:string" />
+          <xs:element minOccurs="0" name="returnStuID" type="xs:string" />
+          <xs:element minOccurs="0" name="routeNo" type="xs:string" />
+          <xs:element minOccurs="0" name="seatBlockIDs" type="tns:seatBlockIDs" />
+          <xs:element minOccurs="0" name="seatBlockMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="seatBlockStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="selectedSeats" type="tns:selectedSeats" />
+          <xs:element minOccurs="0" name="serviceID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuWSRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPassengers" type="xs:string" />
+          <xs:element minOccurs="0" name="tripCode" type="xs:string" />
+          <xs:element minOccurs="0" name="tripNo" type="xs:string" />
+          <xs:element minOccurs="0" name="tripType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="place">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="placeCode" type="xs:string" />
+          <xs:element minOccurs="0" name="placeID" type="xs:string" />
+          <xs:element minOccurs="0" name="placeName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="boardingPoints">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string" />
+          <xs:element minOccurs="0" name="contactName" type="xs:string" />
+          <xs:element minOccurs="0" name="contactNumbers" type="xs:string" />
+          <xs:element minOccurs="0" name="landmark" type="xs:string" />
+          <xs:element minOccurs="0" name="platformNo" type="xs:string" />
+          <xs:element minOccurs="0" name="pointID" type="xs:string" />
+          <xs:element minOccurs="0" name="pointName" type="xs:string" />
+          <xs:element minOccurs="0" name="time" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="passengerAddress">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string" />
+          <xs:element minOccurs="0" name="city" type="xs:string" />
+          <xs:element minOccurs="0" name="email" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+          <xs:element minOccurs="0" name="phoneNo" type="xs:string" />
+          <xs:element minOccurs="0" name="pincode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seatBlockIDs">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="seatBlockID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="selectedSeats">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="selectedSeat" nillable="true" type="tns:selectedSeat" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="selectedSeat">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="mainPassenger" type="xs:string" />
+          <xs:element minOccurs="0" name="passngerAge" type="xs:string" />
+          <xs:element minOccurs="0" name="passngerGender" type="xs:string" />
+          <xs:element minOccurs="0" name="passngerName" type="xs:string" />
+          <xs:element minOccurs="0" name="passngerType" type="xs:string" />
+          <xs:element minOccurs="0" name="seatNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="TentativeBookingsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TentativeBookingResponse" type="tns:tentativeBookingResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="tentativeBookingResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biFinalFare" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalDiscount" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalLevy" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="fareDetails" type="tns:fareDetails" />
+          <xs:element minOccurs="0" name="seatBlock" type="tns:seatBlock" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fareDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accidentReliefFund" type="xs:string" />
+          <xs:element minOccurs="0" name="adultFare" type="xs:string" />
+          <xs:element minOccurs="0" name="basicFare" type="xs:string" />
+          <xs:element minOccurs="0" name="biPGFee" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalDiscount" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalFare" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalLevy" type="xs:string" />
+          <xs:element minOccurs="0" name="bridgeFee" type="xs:string" />
+          <xs:element minOccurs="0" name="childFare" type="xs:string" />
+          <xs:element minOccurs="0" name="concession" type="xs:string" />
+          <xs:element minOccurs="0" name="discounts" type="xs:string" />
+          <xs:element minOccurs="0" name="dupTktFee" type="xs:string" />
+          <xs:element minOccurs="0" name="entryFee" type="xs:string" />
+          <xs:element minOccurs="0" name="familyPassFareDifferenceValue" type="xs:string" />
+          <xs:element minOccurs="0" name="franchiseeCommission" type="xs:string" />
+          <xs:element minOccurs="0" name="infraStructureFee" type="xs:string" />
+          <xs:element minOccurs="0" name="otherLevies" type="xs:string" />
+          <xs:element minOccurs="0" name="postPoneTktFee" type="xs:string" />
+          <xs:element minOccurs="0" name="prePoneTktFee" type="xs:string" />
+          <xs:element minOccurs="0" name="reservationFee" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceFee" type="xs:string" />
+          <xs:element minOccurs="0" name="stuTotalFare" type="xs:string" />
+          <xs:element minOccurs="0" name="tollFee" type="xs:string" />
+          <xs:element minOccurs="0" name="userFee" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSeatlayout">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:seatLayoutRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seatLayoutRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="classID" type="xs:string" />
+          <xs:element minOccurs="0" name="classLayoutID" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="totalPassengers" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetSeatlayoutResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Seatlayout" type="tns:seatLayout" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seatLayout">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="availableSeatNos" type="xs:string" />
+          <xs:element minOccurs="0" name="bookedSeatNos" type="xs:string" />
+          <xs:element minOccurs="0" name="conductorSeatNo" type="xs:string" />
+          <xs:element minOccurs="0" name="ladiesAvailableSeatNos" type="xs:string" />
+          <xs:element minOccurs="0" name="ladiesBookedSeatNos" type="xs:string" />
+          <xs:element minOccurs="0" name="maxColCount" type="xs:string" />
+          <xs:element minOccurs="0" name="maxRowCount" type="xs:string" />
+          <xs:element minOccurs="0" name="seatDetails" type="tns:seatDetails" />
+          <xs:element minOccurs="0" name="service" type="tns:service" />
+          <xs:element minOccurs="0" name="stuFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="totalSeats" type="xs:string" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seatDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="seats" nillable="true" type="tns:seat" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seat">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="column" type="xs:string" />
+          <xs:element minOccurs="0" name="fare" type="xs:string" />
+          <xs:element minOccurs="0" name="quota" type="xs:string" />
+          <xs:element minOccurs="0" name="row" type="xs:string" />
+          <xs:element minOccurs="0" name="seatNo" type="xs:string" />
+          <xs:element minOccurs="0" name="seatStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arrivalDate" type="xs:string" />
+          <xs:element minOccurs="0" name="arrivalTime" type="xs:string" />
+          <xs:element minOccurs="0" name="biFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="busID" type="xs:string" />
+          <xs:element minOccurs="0" name="cancellationFlag" type="xs:string" />
+          <xs:element minOccurs="0" name="classID" type="xs:string" />
+          <xs:element minOccurs="0" name="classLayoutID" type="xs:string" />
+          <xs:element minOccurs="0" name="className" type="xs:string" />
+          <xs:element minOccurs="0" name="corpCode" type="xs:string" />
+          <xs:element minOccurs="0" name="departureDate" type="xs:string" />
+          <xs:element minOccurs="0" name="departureTime" type="xs:string" />
+          <xs:element minOccurs="0" name="destination" type="xs:string" />
+          <xs:element minOccurs="0" name="distance" type="xs:string" />
+          <xs:element minOccurs="0" name="endPoint" type="xs:string" />
+          <xs:element minOccurs="0" name="fare" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyHours" type="xs:string" />
+          <xs:element minOccurs="0" name="maxSeatsAllowed" type="xs:string" />
+          <xs:element minOccurs="0" name="origin" type="xs:string" />
+          <xs:element minOccurs="0" name="refundStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="routeNo" type="xs:string" />
+          <xs:element minOccurs="0" name="seatStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="seatsAvailable" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceID" type="xs:string" />
+          <xs:element minOccurs="0" name="startPoint" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="tripCode" type="xs:string" />
+          <xs:element minOccurs="0" name="viaPlaces" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetCurrentDate">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="GetCurrentDateResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentDate" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmPartialCancellation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:partialCancellationRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="partialCancellationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="cancelSeatNos" type="tns:cancelSeatNos" />
+          <xs:element minOccurs="0" name="cancelType" type="xs:string" />
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelSeatNos">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cancelSeatNo" nillable="true" type="tns:cancelSeatNo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancelSeatNo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="seatNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmPartialCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfirmPartialCancellation" type="tns:partialCancellationResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="partialCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cancellationFee" type="xs:string" />
+          <xs:element minOccurs="0" name="cancellationRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="passengAdultOrChild" type="xs:string" />
+          <xs:element minOccurs="0" name="passengerAge" type="xs:string" />
+          <xs:element minOccurs="0" name="passengerGender" type="xs:string" />
+          <xs:element minOccurs="0" name="passengerName" type="xs:string" />
+          <xs:element minOccurs="0" name="refundAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="remainingSeat" type="tns:seats" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="seatNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="statusMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="seats">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="seatno" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmBooking">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:confirmBkgRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="confirmBkgRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="tripNo" type="xs:string" />
+          <xs:element minOccurs="0" name="tripType" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmBookingResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfirmBookingResponse" type="tns:confirmBkgResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="confirmBkgResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetPlaceList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetPlaceListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PlaceList" type="tns:place" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDetailsForCancellation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:detailsForCancellationRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="detailsForCancellationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="cancelSeatNos" type="tns:cancelSeatNos" />
+          <xs:element minOccurs="0" name="cancelType" type="xs:string" />
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetDetailsForCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DetailsForCancellationResponse" type="tns:detailsForCancellationResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="detailsForCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cancellationDetails" type="tns:cancellationDetails" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cancellationDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biRefundDiscount" type="xs:string" />
+          <xs:element minOccurs="0" name="biRefundLevy" type="xs:string" />
+          <xs:element minOccurs="0" name="cancellationFee" type="xs:string" />
+          <xs:element minOccurs="0" name="cancellationFeeType" type="xs:string" />
+          <xs:element minOccurs="0" name="refundAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="statusMessage" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTxnDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:txnDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txnDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="txnFromDate" type="xs:string" />
+          <xs:element minOccurs="0" name="txnToDate" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTxnDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TxnsDetailsResponse" type="tns:txnDetailsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txnDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="txnDetails" type="tns:txnDetails" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txnDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="txnDetail" nillable="true" type="tns:txnDetail" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="txnDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biFinalFare" type="xs:string" />
+          <xs:element minOccurs="0" name="biFromPlaceName" type="xs:string" />
+          <xs:element minOccurs="0" name="biToPlaceName" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalDiscount" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalLevy" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="depositBalance" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="seatNumbersString" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuName" type="xs:string" />
+          <xs:element minOccurs="0" name="totalPassengers" type="xs:string" />
+          <xs:element minOccurs="0" name="tripType" type="xs:string" />
+          <xs:element minOccurs="0" name="txnDate" type="xs:string" />
+          <xs:element minOccurs="0" name="txnStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="txnTime" type="xs:string" />
+          <xs:element minOccurs="0" name="txnType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTicketStatusDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:apiTicketStatusRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="apiTicketStatusRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetTicketStatusDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APITicketStatusResponse" type="tns:apiTicketStatusResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="apiTicketStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ticketDetailsList" nillable="true" type="tns:ticketDetails" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ticketDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biFinalFare" type="xs:string" />
+          <xs:element minOccurs="0" name="biFromPlaceName" type="xs:string" />
+          <xs:element minOccurs="0" name="biToPlaceName" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalDiscount" type="xs:string" />
+          <xs:element minOccurs="0" name="biTotalLevy" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="depositBalance" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="seatNumbersString" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuName" type="xs:string" />
+          <xs:element minOccurs="0" name="ticketStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="txnDate" type="xs:string" />
+          <xs:element minOccurs="0" name="txnStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="txnTime" type="xs:string" />
+          <xs:element minOccurs="0" name="txnType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAttachedStus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:stuDetailsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stuDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAttachedStusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="STUDetailsResponse" type="tns:stuDetailsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stuDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="stuDetailsList" nillable="true" type="tns:stuDetails" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stuDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="spmAdvReservationDays" type="xs:string" />
+          <xs:element minOccurs="0" name="spmID" type="xs:string" />
+          <xs:element minOccurs="0" name="spmLogoPath" type="xs:string" />
+          <xs:element minOccurs="0" name="spmMaxSeats" type="xs:string" />
+          <xs:element minOccurs="0" name="spmName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmFullCancellation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:fullCancellationRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fullCancellationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biWSClientRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="biWSOBNo" type="xs:string" />
+          <xs:element minOccurs="0" name="cancelSeatNos" type="tns:cancelSeatNos" />
+          <xs:element minOccurs="0" name="cancelType" type="xs:string" />
+          <xs:element minOccurs="0" name="pnrNo" type="xs:string" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfirmFullCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConfirmFullCancellation" type="tns:fullCancellationResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fullCancellationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cancellationFee" type="xs:string" />
+          <xs:element minOccurs="0" name="cancellationRefNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="statusMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetRegisterUserStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:registerUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="registerUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cityTown" type="xs:string" />
+          <xs:element minOccurs="0" name="country" type="xs:string" />
+          <xs:element minOccurs="0" name="dateOfBirth" type="xs:string" />
+          <xs:element minOccurs="0" name="emailId" type="xs:string" />
+          <xs:element minOccurs="0" name="faxNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:string" />
+          <xs:element minOccurs="0" name="maritalStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="phoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="state" type="xs:string" />
+          <xs:element minOccurs="0" name="streetAddress" type="xs:string" />
+          <xs:element minOccurs="0" name="userFullName" type="xs:string" />
+          <xs:element minOccurs="0" name="userLoginId" type="xs:string" />
+          <xs:element minOccurs="0" name="userPassword" type="xs:string" />
+          <xs:element minOccurs="0" name="zipPostalCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetRegisterUserStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GetRegisterUserStatus" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAvailableServices">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:availableServiceRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="availableServiceRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="biFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetAvailableServicesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AvailableServiceResponse" type="tns:availableServiceResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="availableServiceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="services" type="tns:services" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="services">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="service" nillable="true" type="tns:service" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetBoardingPoints">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:boardingPointRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="boardingPointRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arrivalTime" type="xs:string" />
+          <xs:element minOccurs="0" name="biFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="biToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="departureTime" type="xs:string" />
+          <xs:element minOccurs="0" name="journeyDate" type="xs:string" />
+          <xs:element minOccurs="0" name="serviceID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuID" type="xs:string" />
+          <xs:element minOccurs="0" name="stuToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="wsUser" type="tns:wsUser" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetBoardingPointsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BoardingPointsResponse" type="tns:boardingPointsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="boardingPointsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="boardingPoints" nillable="true" type="tns:boardingPoints" />
+          <xs:element minOccurs="0" name="stuFromPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="stuToPlace" type="tns:place" />
+          <xs:element minOccurs="0" name="wsResponse" type="tns:wsResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Exception" type="tns:Exception" />
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBoardingPoints">
+    <wsdl:part name="parameters" element="tns:GetBoardingPoints" />
+  </wsdl:message>
+  <wsdl:message name="GetPlaceList">
+    <wsdl:part name="parameters" element="tns:GetPlaceList" />
+  </wsdl:message>
+  <wsdl:message name="GetIDProofsResponse">
+    <wsdl:part name="parameters" element="tns:GetIDProofsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisterUserStatus">
+    <wsdl:part name="parameters" element="tns:GetRegisterUserStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetDepositBalance">
+    <wsdl:part name="parameters" element="tns:GetDepositBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardingPointsResponse">
+    <wsdl:part name="parameters" element="tns:GetBoardingPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginUserStatus">
+    <wsdl:part name="parameters" element="tns:GetLoginUserStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsForCancellation">
+    <wsdl:part name="parameters" element="tns:GetDetailsForCancellation" />
+  </wsdl:message>
+  <wsdl:message name="GetDepositBalanceResponse">
+    <wsdl:part name="parameters" element="tns:GetDepositBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachedStusResponse">
+    <wsdl:part name="parameters" element="tns:GetAttachedStusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmFullCancellation">
+    <wsdl:part name="parameters" element="tns:ConfirmFullCancellation" />
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception" />
+  </wsdl:message>
+  <wsdl:message name="TentativeBookings">
+    <wsdl:part name="parameters" element="tns:TentativeBookings" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatlayout">
+    <wsdl:part name="parameters" element="tns:GetSeatlayout" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBooking">
+    <wsdl:part name="parameters" element="tns:ConfirmBooking" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketStatusDetailsResponse">
+    <wsdl:part name="parameters" element="tns:GetTicketStatusDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSeatlayoutResponse">
+    <wsdl:part name="parameters" element="tns:GetSeatlayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmFullCancellationResponse">
+    <wsdl:part name="parameters" element="tns:ConfirmFullCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentDate">
+    <wsdl:part name="parameters" element="tns:GetCurrentDate" />
+  </wsdl:message>
+  <wsdl:message name="GetRegisterUserStatusResponse">
+    <wsdl:part name="parameters" element="tns:GetRegisterUserStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentDateResponse">
+    <wsdl:part name="parameters" element="tns:GetCurrentDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailsForCancellationResponse">
+    <wsdl:part name="parameters" element="tns:GetDetailsForCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketStatusDetails">
+    <wsdl:part name="parameters" element="tns:GetTicketStatusDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAttachedStus">
+    <wsdl:part name="parameters" element="tns:GetAttachedStus" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginUserStatusResponse">
+    <wsdl:part name="parameters" element="tns:GetLoginUserStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlaceListResponse">
+    <wsdl:part name="parameters" element="tns:GetPlaceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTxnDetailsResponse">
+    <wsdl:part name="parameters" element="tns:GetTxnDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableServicesResponse">
+    <wsdl:part name="parameters" element="tns:GetAvailableServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmBookingResponse">
+    <wsdl:part name="parameters" element="tns:ConfirmBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTxnDetails">
+    <wsdl:part name="parameters" element="tns:GetTxnDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAvailableServices">
+    <wsdl:part name="parameters" element="tns:GetAvailableServices" />
+  </wsdl:message>
+  <wsdl:message name="TentativeBookingsResponse">
+    <wsdl:part name="parameters" element="tns:TentativeBookingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPartialCancellation">
+    <wsdl:part name="parameters" element="tns:ConfirmPartialCancellation" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmPartialCancellationResponse">
+    <wsdl:part name="parameters" element="tns:ConfirmPartialCancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIDProofs">
+    <wsdl:part name="parameters" element="tns:GetIDProofs" />
+  </wsdl:message>
+  <wsdl:portType name="BusWebService">
+    <wsdl:operation name="GetLoginUserStatus">
+      <wsdl:input name="GetLoginUserStatus" message="tns:GetLoginUserStatus" />
+      <wsdl:output name="GetLoginUserStatusResponse" message="tns:GetLoginUserStatusResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIDProofs">
+      <wsdl:input name="GetIDProofs" message="tns:GetIDProofs" />
+      <wsdl:output name="GetIDProofsResponse" message="tns:GetIDProofsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositBalance">
+      <wsdl:input name="GetDepositBalance" message="tns:GetDepositBalance" />
+      <wsdl:output name="GetDepositBalanceResponse" message="tns:GetDepositBalanceResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="TentativeBookings">
+      <wsdl:input name="TentativeBookings" message="tns:TentativeBookings" />
+      <wsdl:output name="TentativeBookingsResponse" message="tns:TentativeBookingsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatlayout">
+      <wsdl:input name="GetSeatlayout" message="tns:GetSeatlayout" />
+      <wsdl:output name="GetSeatlayoutResponse" message="tns:GetSeatlayoutResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentDate">
+      <wsdl:input name="GetCurrentDate" message="tns:GetCurrentDate" />
+      <wsdl:output name="GetCurrentDateResponse" message="tns:GetCurrentDateResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPartialCancellation">
+      <wsdl:input name="ConfirmPartialCancellation" message="tns:ConfirmPartialCancellation" />
+      <wsdl:output name="ConfirmPartialCancellationResponse" message="tns:ConfirmPartialCancellationResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBooking">
+      <wsdl:input name="ConfirmBooking" message="tns:ConfirmBooking" />
+      <wsdl:output name="ConfirmBookingResponse" message="tns:ConfirmBookingResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceList">
+      <wsdl:input name="GetPlaceList" message="tns:GetPlaceList" />
+      <wsdl:output name="GetPlaceListResponse" message="tns:GetPlaceListResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailsForCancellation">
+      <wsdl:input name="GetDetailsForCancellation" message="tns:GetDetailsForCancellation" />
+      <wsdl:output name="GetDetailsForCancellationResponse" message="tns:GetDetailsForCancellationResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTxnDetails">
+      <wsdl:input name="GetTxnDetails" message="tns:GetTxnDetails" />
+      <wsdl:output name="GetTxnDetailsResponse" message="tns:GetTxnDetailsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketStatusDetails">
+      <wsdl:input name="GetTicketStatusDetails" message="tns:GetTicketStatusDetails" />
+      <wsdl:output name="GetTicketStatusDetailsResponse" message="tns:GetTicketStatusDetailsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachedStus">
+      <wsdl:input name="GetAttachedStus" message="tns:GetAttachedStus" />
+      <wsdl:output name="GetAttachedStusResponse" message="tns:GetAttachedStusResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFullCancellation">
+      <wsdl:input name="ConfirmFullCancellation" message="tns:ConfirmFullCancellation" />
+      <wsdl:output name="ConfirmFullCancellationResponse" message="tns:ConfirmFullCancellationResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterUserStatus">
+      <wsdl:input name="GetRegisterUserStatus" message="tns:GetRegisterUserStatus" />
+      <wsdl:output name="GetRegisterUserStatusResponse" message="tns:GetRegisterUserStatusResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableServices">
+      <wsdl:input name="GetAvailableServices" message="tns:GetAvailableServices" />
+      <wsdl:output name="GetAvailableServicesResponse" message="tns:GetAvailableServicesResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardingPoints">
+      <wsdl:input name="GetBoardingPoints" message="tns:GetBoardingPoints" />
+      <wsdl:output name="GetBoardingPointsResponse" message="tns:GetBoardingPointsResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BusWebServiceSoapBinding" type="tns:BusWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetIDProofs">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetIDProofs">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetIDProofsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginUserStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetLoginUserStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLoginUserStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDepositBalance">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetDepositBalance">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDepositBalanceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TentativeBookings">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="TentativeBookings">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="TentativeBookingsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeatlayout">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetSeatlayout">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetSeatlayoutResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentDate">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetCurrentDate">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetCurrentDateResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmPartialCancellation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ConfirmPartialCancellation">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConfirmPartialCancellationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmBooking">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ConfirmBooking">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConfirmBookingResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaceList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetPlaceList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPlaceListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailsForCancellation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetDetailsForCancellation">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDetailsForCancellationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTxnDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetTxnDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTxnDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketStatusDetails">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetTicketStatusDetails">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetTicketStatusDetailsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttachedStus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetAttachedStus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAttachedStusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmFullCancellation">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="ConfirmFullCancellation">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="ConfirmFullCancellationResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableServices">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetAvailableServices">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAvailableServicesResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegisterUserStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetRegisterUserStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetRegisterUserStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardingPoints">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="GetBoardingPoints">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBoardingPointsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusWebService">
+    <wsdl:port name="BusWebServiceImplPort" binding="tns:BusWebServiceSoapBinding">
+      <soap:address location="http://111.93.131.112/biws/buswebservice" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

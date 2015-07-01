@@ -1,0 +1,2 @@
+C:\Users\WebAshlar\Desktop\BusIndia\BusIndia_Universal\BusIndia_Universal.WindowsPhone\BusIndia_Universal.WindowsPhone.csproj;neutral
+C:\Users\WebAshlar\Desktop\BusIndia\BusIndiaBLL\BusIndiaBLL.csproj;neutral

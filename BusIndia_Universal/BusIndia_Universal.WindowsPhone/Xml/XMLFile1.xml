@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<soapenv:Envelope xmlns:com="com.busindia.webservices" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <com:GetSeatlayout>
+      <arg0>
+        
+        <biFromPlace>
+          
+          <placeCode>AMD</placeCode>
+          
+          <placeID>208</placeID>
+          
+          <placeName>AHMEDABAD</placeName>
+        </biFromPlace>
+        
+        <biToPlace>
+          
+          <placeCode>SRT</placeCode>
+          
+          <placeID>317</placeID>
+          
+          <placeName>SURAT</placeName>
+        </biToPlace>
+        
+        <classID>379</classID>
+        
+        <classLayoutID>360</classLayoutID>
+        
+        <journeyDate>01/05/2015</journeyDate>
+        
+        <serviceID>4161</serviceID>
+        
+        <stuFromPlace>
+          
+          <placeCode>?</placeCode>
+          
+          <placeID>?</placeID>
+          
+          <placeName>?</placeName>
+        </stuFromPlace>
+        
+        <stuID>2</stuID>
+        
+        <stuToPlace>
+          
+          <placeCode>?</placeCode>
+          
+          <placeID>?</placeID>
+          
+          <placeName>?</placeName>
+        </stuToPlace>
+        
+        <totalPassengers>?</totalPassengers>
+        
+        <wsUser>
+          
+          <franchUserID>?</franchUserID>
+          
+          <password>apiclient</password>
+          
+          <userID>440</userID>
+          
+          <userKey>?</userKey>
+          
+          <userName>APICLIENT@BUSINDIA.COM</userName>
+          
+          <userRole>?</userRole>
+          
+          <userStatus>?</userStatus>
+          
+          <userType>101</userType>
+        </wsUser>
+      </arg0>
+    </com:GetSeatlayout>
+  </soapenv:Body>
+</soapenv:Envelope>
+
+<!--_arrivalDate: "30/04/2015"
+    _arrivalTime: "23:45"
+    _classID: "379"
+    _classLayoutID: "360"
+    _className: "NON AC SLEEPER COACH"
+    _corpCode: "GSRTC"
+    _departureTime: "20:00"
+    _destination: "SHIRDI"
+    _fare: "324"
+    _journeyDate: "30/04/2015"
+    _journeyHours: "03:45"
+    _maxSeatsAllowed: "6"
+    _origin: "AHMEDABAD"
+    _placeIDFrom: null
+    _placeIDto: null
+    _refundStatus: "Refundable"
+    _routeNo: "1"
+    _seatsAvailable: "15"
+    _seatStatus: "A"
+    _serviceID: "4161"
+    _startPoint: "AHMEDABAD"
+    _stuID: "2"
+    _tripCode: "2000AMDSHRD"
+    _viaPlaces: null
+    arrivalDate: "30/04/2015"
+    arrivalTime: "23:45"
+    classID: "379"
+    classLayoutID: "360"
+    className: "NON AC SLEEPER COACH"
+    corpCode: "GSRTC"
+    departureTime: "20:00"
+    destination: "SHIRDI"
+    fare: "324"
+    journeyDate: "30/04/2015"
+    journeyHours: "03:45"
+    maxSeatsAllowed: "6"
+    origin: "AHMEDABAD"
+    placeIDFrom: null
+    placeIDto: null
+    PropertyChanged: null
+    refundStatus: "Refundable"
+    routeNo: "1"
+    seatsAvailable: "15"
+    seatStatus: "A"
+    serviceID: "4161"
+    startPoint: "AHMEDABAD"
+    stuID: "2"
+    tripCode: "2000AMDSHRD"
+    viaPlaces: null-->

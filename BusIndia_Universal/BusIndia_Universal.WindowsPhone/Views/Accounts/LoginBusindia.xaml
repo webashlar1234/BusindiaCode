@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="BusIndia_Universal.LoginBusindia"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <SlideNavigationTransitionInfo/>
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+    <Grid>
+        <Grid Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Center" Background="#193A67">
+            <Image x:Name="imgBack" Grid.Row="0" Source="{Binding bgImage}" VerticalAlignment="Stretch" Stretch="Fill"></Image>
+        </Grid>
+    
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>        
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Login" FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Image  Source="/Assets/hdpi/login_close.png" HorizontalAlignment="Right" Stretch="None" Height="25" Width="25" Margin="10" Tapped="GoBackOnClose"/>
+        </Grid>
+        <Grid x:Name="ContentPanel" Grid.Row="1" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" VerticalAlignment="Stretch" Margin="5,0,5,0" >
+                <Border CornerRadius="20,20,20,20" BorderBrush="White" Background="White" BorderThickness="2" VerticalAlignment="Stretch">
+                    <StackPanel x:Name="ContentStackPanel" Orientation="Vertical"  VerticalAlignment="Stretch">
+                        <Grid x:Name="ContentTitle">
+                            <Image Source="/Assets/hdpi/login_back.png"  Stretch="None" HorizontalAlignment="Left" Tapped="GoBack"/>
+                            <Image Source="/Assets/hdpi/splash_logo.png" Height="Auto" Width="100"  Stretch="Uniform" HorizontalAlignment="Center"/>
+                        </Grid>
+                        <StackPanel Margin="30,40,30,0" >
+                            <TextBlock Text="Find all of your bookings by logging in to your Busindia.com acount." HorizontalAlignment="Center"  Foreground="Black" TextWrapping="Wrap" TextAlignment="Left" FontSize="18" Padding="10" Margin="0,0,0,0"/>
+                            <StackPanel x:Name="FeildGroupStackPanel" Orientation="Vertical" Margin="30,0,30,0">
+                                <TextBox x:Name="txtEmail" BorderBrush="#8B8B8B" BorderThickness="1" PlaceholderText="Email" />
+                                <PasswordBox x:Name="txtPassword"  BorderBrush="#8B8B8B" BorderThickness="1" PlaceholderText="Password"/>
+                                <Grid Height="Auto" HorizontalAlignment="Right">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>-->
+                                    <!--<CheckBox Style="{StaticResource chkbox}" BorderBrush="#8B8B8B" IsChecked="True" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Foreground="Black"  Margin="-14,0,24,0">
+                                        <TextBlock FontSize="12">Keep me logged in
+                                        </TextBlock>
+                                    </CheckBox>-->
+                                    <!--<TextBlock Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Width="Auto"> 
+                                        I accept the <Bold>Terms and Conditions</Bold>
+                                    </TextBlock>-->
+                                    <!--<TextBlock Grid.Row="0"  Text="Terms and Condition" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Right" TextWrapping="Wrap" Width="Auto"/>-->
+                                </Grid>
+                                <!--<CheckBox BorderBrush="#8B8B8B" HorizontalAlignment="Center" Content="Keep me logged in" Foreground="Black"/>-->
+                                <Button Click="LoginClick" Background="#000099"  Height="70" HorizontalAlignment="Stretch">
+                                    Login
+                                </Button>
+                                <Button Click="RegisterBusIndia" Background="#999999" HorizontalAlignment="Stretch" Height="70">
+                                    Register
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <!--<StackPanel Orientation="Vertical" Grid.Row="0">
+                    <toolkit:PhoneTextBox Hint="Email Address" Text="" Name="TxtEmail"/>
+                    <toolkit:PhoneTextBox Hint="Password" Text="" Name="txtPassword"/>
+                    <Button Content="Log in" Click="Button_Click"></Button>
+                </StackPanel>-->
+        </Grid>
+    </Grid>
+    </Grid>
+</Page>

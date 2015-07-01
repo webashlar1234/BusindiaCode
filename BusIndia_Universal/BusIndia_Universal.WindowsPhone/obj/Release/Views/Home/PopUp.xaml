@@ -1,0 +1,24 @@
+﻿<UserControl
+    x:Class="BusIndia_Universal.Views.Home.PopUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal.Views.Home"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="LayoutRoot" Background="White">
+            <TextBlock Margin="25"  Text="Do you want to cancel this booking" Foreground="Black" />
+            <Grid Height="1" Background="LightGray" ></Grid>
+            <StackPanel Orientation="Horizontal">
+                <Button x:ConnectionId='1' Width=" 50" Content="Yes" Foreground="Black"                     />
+                <Grid VerticalAlignment="Stretch" Width="2"  Background="LightGray" ></Grid>
+                <Button x:ConnectionId='2' Width=" 50" Content="No" Foreground="Black"                     />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
+

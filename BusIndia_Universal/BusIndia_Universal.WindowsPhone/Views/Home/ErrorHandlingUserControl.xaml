@@ -1,0 +1,38 @@
+﻿<UserControl
+    x:Class="BusIndia_Universal.ErrorHandlingUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BusIndia_Universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="161" Width="409">
+
+    <Grid Background="White" Margin="0,0,0.167,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="20" Margin="0,20,0,0" HorizontalAlignment="Center" Text="Error occured" Foreground="Black"></TextBlock>
+        <TextBlock FontSize="20" Grid.Row="1" Margin="0,20,0,10" HorizontalAlignment="Center" Text="Do you want to re-try ?" Foreground="Black"></TextBlock>
+        <Grid Background="Black" Grid.Row="2" Height="1"></Grid>
+        <Grid  Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel x:Name="btnYes" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="btnYes_Tapped">
+            <TextBlock  HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center"  Margin="0,0,0,0"  Text="Yes" Foreground="Black"></TextBlock>
+            </StackPanel>
+            
+            <Grid Grid.Column="1" Background="Black" Height="50" Width="1"></Grid>
+
+            <StackPanel x:Name="btnNo" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="btnNo_Tapped">
+                <TextBlock  FontSize="20"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0"  Text="No" Foreground="Black"></TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

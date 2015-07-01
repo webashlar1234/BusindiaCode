@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c5ba9bae-85bb-4c1b-a71b-6ec50e9078b5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BusIndia_Universal</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BusSearchCitySearchClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CabBookingSummaryClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CommonModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ExceptionLog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\filterBus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GetAvailableService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GetAvailableServicesReturn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\getBoardingPoints.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\getBusSearch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\getIDProofs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\getSeatlayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\HotelBookingSummaryClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginBusindiaClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LoginDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PassengerInfoDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PassengerInformationClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PassengerRadioBuuton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\pickDropHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PickupDropoffRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PickupDropoffReturn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RegistrationFormclass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SampleConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TripSearchModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Service Reference\" />
+  </ItemGroup>
+</Project>
